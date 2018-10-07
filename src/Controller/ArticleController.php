@@ -171,7 +171,7 @@ class ArticleController extends AbstractController {
 	 * @Route("/{id}/delete", name="article_delete_api", methods="DELETE")
 	 */
 	public function deleteapi(Request $request, Article $article): Response {
-			//Suppression du fichier
+			//Suppression du fichier avec API delete
 			$em = $this->getDoctrine ()->getManager ();
 			$em->remove ( $article );
 			$em->flush ();
